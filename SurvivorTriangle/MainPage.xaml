@@ -5,6 +5,25 @@
              x:Class="SurvivorTriangle.MainPage"
              BackgroundColor="{DynamicResource SecondaryColor}">
 
-    <skia:SKCanvasView x:Name="canvasV" PaintSurface="OnPaint" IgnorePixelScaling="True">
-    </skia:SKCanvasView>
+    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,*">
+        <skia:SKCanvasView
+            x:Name="canvasV"
+            PaintSurface="OnPaint"
+            IgnorePixelScaling="True"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"/>
+        <Button 
+                Text="&lt;&lt; Previous"
+                FontAttributes="Bold"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="OnPrevClicked"/>
+        <Button 
+                Text="Next &gt;&gt;"
+                FontAttributes="Bold"
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="OnNextClicked"/>
+    </Grid>
 </ContentPage>

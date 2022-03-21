@@ -77,5 +77,21 @@ public partial class MainPage : ContentPage
             }
         }
     }
+
+    private void OnPrevClicked(object sender, EventArgs args)
+    {
+        if (_triangleIndex == -1)
+            return;
+        _triangleIndex--;
+        canvasV.InvalidateSurface();
+    }
+
+    private void OnNextClicked(object sender, EventArgs args)
+    {
+        if (_triangleIndex == (_triangles.Count - 1))
+            return;
+        _triangleIndex++;
+        canvasV.InvalidateSurface();
+    }
 }
 

@@ -1,6 +1,7 @@
 .vs
 .idea
-.DS_Store
 bin
 obj
+packages
 *.user
+.DS_Store
